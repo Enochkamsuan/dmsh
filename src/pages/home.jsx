@@ -8,6 +8,7 @@ import bottom_right from "../assets/images/4.jpg";
 import ServiceCards from "../components/cards/serviceCard";
 import DoctorsCard from "../components/cards/doctorsCard";
 import { FaArrowRightLong } from "react-icons/fa6";
+import ReviewCards from "../components/cards/reviewCards";
 
 const Home = () => {
   return (
@@ -22,7 +23,7 @@ const Home = () => {
               <img
                 src={hero}
                 alt="hero"
-                className="w-full h-[90vh] object-contain"
+                className="w-full h-full object-contain"
               />
             </div>
             <div>
@@ -50,10 +51,11 @@ const Home = () => {
           </div>
         </div>
       </section>
+
       <section className="bg-blue-50 px-8 md:px-16 lg:px-24 py-5 md:py-16 lg-py-20">
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 items-center gap-3">
           <div>
-            <div className="text-5xl text-blue-950 font-Manrope font-bold">
+            <div className=" text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-blue-950 font-Manrope font-bold">
               Consult A Doctor Anywhere, Anytime
             </div>
             <div className="font-Manrope text-base font-normal text-slate-600 py-6">
@@ -71,39 +73,37 @@ const Home = () => {
             style={{ backgroundImage: `url(${banner})` }}
             className="bg-center bg-no-repeat"
           >
-            <div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 items-center">
-                <div>
-                  <img
-                    src={top_left}
-                    alt="Doctors"
-                    className="rounded-tl-[50px] rounded-br-[50px] w-full h-auto object-cover"
-                  />
-                </div>
-                <div className="flex items-center">
-                  <div className="bg-white w-40 h-40 md:w-48 md:h-48 rounded-full flex flex-col justify-center items-center shadow-md text-center p-6">
-                    <p className="text-blue-600 text-4xl font-bold">5+</p>
-                    <p className="text-gray-700 text-lg font-semibold mt-2">
-                      Years of experience
-                    </p>
-                  </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 items-center">
+              <div>
+                <img
+                  src={top_left}
+                  alt="Doctors"
+                  className="rounded-tl-[50px] rounded-br-[50px] w-full h-auto object-cover"
+                />
+              </div>
+              <div className="flex items-center">
+                <div className="bg-white w-40 h-40 md:w-48 md:h-48 rounded-full flex flex-col justify-center items-center shadow-md text-center p-6">
+                  <p className="text-blue-600 text-4xl font-bold">5+</p>
+                  <p className="text-gray-700 text-lg font-semibold mt-2">
+                    Years of experience
+                  </p>
                 </div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-2">
-                <div className="flex justify-center md:justify-end">
-                  <img
-                    src={bottom_left}
-                    alt="Patient Care"
-                    className="w-64 h-64 object-cover rounded-full"
-                  />
-                </div>
-                <div className="flex justify-center md:justify-start">
-                  <img
-                    src={bottom_right}
-                    alt="Meeting"
-                    className="w-64 h-64 object-cover rounded-tr-[50px] rounded-bl-[50px]"
-                  />
-                </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-2">
+              <div className="flex justify-center md:justify-end">
+                <img
+                  src={bottom_left}
+                  alt="Patient Care"
+                  className="w-64 h-64 object-cover rounded-full"
+                />
+              </div>
+              <div className="flex justify-center md:justify-start">
+                <img
+                  src={bottom_right}
+                  alt="Meeting"
+                  className="w-64 h-64 object-cover rounded-tr-[50px] rounded-bl-[50px]"
+                />
               </div>
             </div>
           </div>
@@ -135,20 +135,38 @@ const Home = () => {
               anytime, anywhere.
             </div>
             <div className="flex items-center gap-3">
-              <div className="bg-white rounded-full text-primary p-2"><FaArrowRightLong /></div>
-              <div className="text-white font-Manrope">Trust care is health care, but easy.</div>
+              <div className="bg-white rounded-full text-primary p-2">
+                <FaArrowRightLong />
+              </div>
+              <div className="text-white font-Manrope">
+                Trust care is health care, but easy.
+              </div>
             </div>
             <div className="flex items-center gap-3 mt-2">
-              <div className="bg-white rounded-full text-primary p-2"><FaArrowRightLong /></div>
-              <div className="text-white font-Manrope">Top Searched Specialties.</div>
+              <div className="bg-white rounded-full text-primary p-2">
+                <FaArrowRightLong />
+              </div>
+              <div className="text-white font-Manrope">
+                Top Searched Specialties.
+              </div>
             </div>
             <div className="mt-5">
-                  <button className="bg-white rounded-full font-Manrope px-6 py-3">
-                    View All Team
-                  </button>
-                </div>
+              <button className="bg-white rounded-full font-Manrope px-6 py-3">
+                View All Team
+              </button>
+            </div>
           </div>
         </div>
+      </section>
+      <section className="px-8 md:px-16 lg:px-24 py-5 md:py-16 lg-py-20">
+        <div className="text-5xl text-blue-950 font-Manrope text-center font-bold mb-16">
+          What our patients Says
+        </div>
+        <div className="text-slate-500 leading-7 font-Manrope text-center mb-16">
+          Hear from patients who’ve experienced the care, compassion, and
+          convenience of our remote healthcare services.
+        </div>
+        <ReviewCards />
       </section>
     </div>
   );

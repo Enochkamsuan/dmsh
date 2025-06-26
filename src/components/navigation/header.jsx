@@ -7,8 +7,8 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import logo from "../../assets/images/logo.jpeg";
 
 const navigation = [
-  { name: "Home", href: "#", current: true },
-  { name: "About", href: "#", current: false },
+  { name: "Home", href: "/", current: true },
+  { name: "About", href: "/about-us", current: false },
   { name: "Service", href: "#", current: false },
   { name: "Book Appointment", href: "#", current: false },
   { name: "Contact Us", href: "#", current: false },
@@ -20,7 +20,7 @@ function classNames(...classes) {
 
 export default function Header() {
   return (
-    <Disclosure as="nav" className="bg-primary py-4 sm:py-6 md:py-8 lg:py-14">
+    <Disclosure as="nav" className="bg-primary py-4 sm:py-6 md:py-8">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 right-0 flex items-center min-[768px]:hidden">
@@ -42,7 +42,7 @@ export default function Header() {
               <img
                 alt="Your Company"
                 src={logo}
-                className="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 lg:h-28 lg:w-28 object-contain"
+                className="h-20 w-20 object-contain"
               />
             </div>
           </div>
@@ -54,7 +54,7 @@ export default function Header() {
                     key={item.name}
                     href={item.href}
                     aria-current={item.current ? "page" : undefined}
-                    className="text-white rounded-md px-2 py-2 text-sm lg:text-base xl:text-lg font-bold font-Manrope hover:bg-white hover:bg-opacity-20 transition-colors" // CHANGE 16: Adjusted text sizing breakpoints
+                    className="text-white rounded-md px-2 py-2 text-sm lg:text-base font-bold font-Manrope hover:bg-white hover:bg-opacity-20 transition-colors" 
                   >
                     {item.name}
                   </a>
