@@ -5,7 +5,9 @@ import banner from "../assets/images/2.png";
 import top_left from "../assets/images/1.jpg";
 import bottom_left from "../assets/images/3.jpg";
 import bottom_right from "../assets/images/4.jpg";
-import ServiceCards from "../cards/serviceCards/service";
+import ServiceCards from "../components/cards/serviceCard";
+import DoctorsCard from "../components/cards/doctorsCard";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const Home = () => {
   return (
@@ -67,7 +69,8 @@ const Home = () => {
           </div>
           <div
             style={{ backgroundImage: `url(${banner})` }}
-            className="bg-center bg-no-repeat">
+            className="bg-center bg-no-repeat"
+          >
             <div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 items-center">
                 <div>
@@ -107,7 +110,45 @@ const Home = () => {
         </div>
       </section>
       <section className="px-8 md:px-16 lg:px-24 py-5 md:py-16 lg-py-20">
+        <div className="text-center text-blue-900 text-5xl font-Manrope font-semibold mb-4 md:mb-11">
+          Our Best services
+        </div>
         <ServiceCards />
+        <div className="text-center mt-4 md:mt-11">
+          <button className="bg-primary rounded-full px-6 py-3 font-Manrope text-white">
+            View All Services
+          </button>
+        </div>
+      </section>
+      <section className="px-8 md:px-16 lg:px-24 py-5 md:py-16 lg-py-20 bg-primary">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+          <div>
+            <DoctorsCard />
+          </div>
+          <div>
+            <div className="bg-white/40 text-6xl font-Manrope font-bold text-white p-2">
+              Meet Our Expert Doctors
+            </div>
+            <div className="font-Manrope text-base font-normal tracking-[1px] text-white py-6">
+              Our team of highly qualified and experienced doctors from across
+              specialties is here to provide you with trusted, personalized care
+              anytime, anywhere.
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="bg-white rounded-full text-primary p-2"><FaArrowRightLong /></div>
+              <div className="text-white font-Manrope">Trust care is health care, but easy.</div>
+            </div>
+            <div className="flex items-center gap-3 mt-2">
+              <div className="bg-white rounded-full text-primary p-2"><FaArrowRightLong /></div>
+              <div className="text-white font-Manrope">Top Searched Specialties.</div>
+            </div>
+            <div className="mt-5">
+                  <button className="bg-white rounded-full font-Manrope px-6 py-3">
+                    View All Team
+                  </button>
+                </div>
+          </div>
+        </div>
       </section>
     </div>
   );
