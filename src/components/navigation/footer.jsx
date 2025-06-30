@@ -84,7 +84,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <ul className="list-disc flex justify-center items-center gap-7">
+      <ul className="md:list-disc whitespace-nowrap mt-5 md:mt-0 flex justify-center items-center gap-7">
          <li className="font-Manrope text-white text-sm">Copyright &copy; 2025</li>
          <li className="font-Manrope text-white text-sm">DHMS</li>
          <li className="font-Manrope text-white text-sm">All rights reserved</li>

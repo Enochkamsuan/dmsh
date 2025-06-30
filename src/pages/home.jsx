@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <div>
       <section className="hero">
-        <div className="bg-primary h-screen px-8 md:px-16 lg:px-24">
+        <div className="bg-primary px-8 md:px-16 lg:px-24 py-5 md:py-0">
           <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 items-center gap-3">
             <div
               style={{ backgroundImage: `url(${hero_2})` }}
@@ -27,7 +27,7 @@ const Home = () => {
               />
             </div>
             <div>
-              <div className="bg-white/40 text-6xl font-Manrope font-bold text-white p-2">
+              <div className="bg-white/40 text-xl md:text-2xl lg:text-6xl font-Manrope font-bold text-white p-2">
                 Best Reliable Medical Service
               </div>
               <div className="font-Manrope text-base font-normal text-white py-6">
@@ -51,7 +51,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
       <section className="bg-blue-50 px-8 md:px-16 lg:px-24 py-5 md:py-16 lg-py-20">
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 items-center gap-3">
           <div>
@@ -110,7 +109,7 @@ const Home = () => {
         </div>
       </section>
       <section className="px-8 md:px-16 lg:px-24 py-5 md:py-16 lg-py-20">
-        <div className="text-center text-blue-900 text-5xl font-Manrope font-semibold mb-4 md:mb-11">
+        <div className="text-center text-blue-900 text-xl md:text-2xl lg:text-5xl font-Manrope font-semibold mb-4 md:mb-11">
           Our Best services
         </div>
         <ServiceCards />
@@ -126,7 +125,7 @@ const Home = () => {
             <DoctorsCard />
           </div>
           <div>
-            <div className="bg-white/40 text-6xl font-Manrope font-bold text-white p-2">
+            <div className="bg-white/40 text-xl md:text-2xl lg:text-6xl font-Manrope font-bold text-white p-2">
               Meet Our Expert Doctors
             </div>
             <div className="font-Manrope text-base font-normal tracking-[1px] text-white py-6">
@@ -159,7 +158,7 @@ const Home = () => {
         </div>
       </section>
       <section className="px-8 md:px-16 lg:px-24 py-5 md:py-16 lg-py-20">
-        <div className="text-5xl text-blue-950 font-Manrope text-center font-bold mb-16">
+        <div className="text-xl md:text-2xl lg:text-5xl text-blue-950 font-Manrope text-center font-bold mb-16">
           What our patients Says
         </div>
         <div className="text-slate-500 leading-7 font-Manrope text-center mb-16">
