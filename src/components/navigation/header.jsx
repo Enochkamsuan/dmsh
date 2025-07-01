@@ -4,7 +4,7 @@ import {
   DisclosurePanel,
 } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import logo from "../../assets/images/logo.jpeg";
+import logo from '../../assets/images/logo.png';
 
 const navigation = [
   { name: "Home", href: "/", current: true },
