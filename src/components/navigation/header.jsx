@@ -4,14 +4,15 @@ import {
   DisclosurePanel,
 } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import logo from '../../assets/images/logo.png';
+import logo from "../../assets/images/logo.png";
+import { Link } from "react-router-dom";
 
 const navigation = [
   { name: "Home", href: "/", current: true },
   { name: "About", href: "/about-us", current: false },
-  { name: "Service", href: "#", current: false },
-  { name: "Book Appointment", href: "#", current: false },
-  { name: "Contact Us", href: "#", current: false },
+  { name: "Service", href: "/service", current: false },
+  { name: "Book Appointment", href: "/make_appointment", current: false },
+  { name: "Contact Us", href: "/contact", current: false },
 ];
 
 function classNames(...classes) {
@@ -39,11 +40,13 @@ export default function Header() {
           </div>
           <div className="flex flex-1 items-center justify-between min-[768px]:justify-start">
             <div className="flex shrink-0 items-center ml-8 min-[768px]:ml-0">
-              <img
-                alt="Your Company"
-                src={logo}
-                className="h-20 w-20 object-contain"
-              />
+              <Link to="/">
+                <img
+                  alt="Your Company"
+                  src={logo}
+                  className="h-20 w-20 object-contain"
+                />
+              </Link>
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 min-[768px]:static min-[768px]:inset-auto min-[768px]:ml-6 min-[768px]:pr-0">
@@ -54,7 +57,7 @@ export default function Header() {
                     key={item.name}
                     href={item.href}
                     aria-current={item.current ? "page" : undefined}
-                    className="text-white rounded-md px-2 py-2 text-sm lg:text-base font-bold font-Manrope hover:bg-white hover:bg-opacity-20 transition-colors" 
+                    className="text-white rounded-md px-2 py-2 text-sm lg:text-base font-bold font-Manrope  transition-colors"
                   >
                     {item.name}
                   </a>

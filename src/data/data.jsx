@@ -62,6 +62,11 @@ const data = {
       customer: "Patient",
     },
   ],
+  doctors: [
+    { name: "Dr. Alice Smith", specialty: "Cardiology", phone: "1234567890" },
+    { name: "Dr. Brian Johnson", specialty: "Neurology", phone: "1234567890" },
+    { name: "Dr. Clara Davis", specialty: "Pediatrics", phone: "1234567890" },
+  ],
 };
 
 export default data;
