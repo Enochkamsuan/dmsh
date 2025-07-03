@@ -61,14 +61,15 @@ const MakeAppointment = () => {
   const today = new Date().toISOString().split("T")[0];
 
   return (
-    <div className="px-8 md:px-16 lg:px-24 py-5 md:py-20">
+    <div className="px-8 md:px-16 lg:px-24 py-5 md:py-20 bg-gray-100">
       {bookForm === "form" ? (
         <div className="w-2/3 mx-auto">
           <div className="text-2xl font-bold text-center my-4">
             Book appointment
           </div>
-          <div className="bg-slate-100 rounded-lg p-6">
-            <div className="mb-4">
+          <div className="bg-slate-50 rounded-lg p-11">
+           <div className="flex items-center gap-3">
+             <div className="mb-4 w-full">
               <label className="block text-sm font-medium mb-2">
                 Select date
               </label>
@@ -77,10 +78,10 @@ const MakeAppointment = () => {
                 value={selectedDate}
                 onChange={(e) => setSelectedDate(e.target.value)}
                 min={today}
-                className="border border-black bg-transparent outline-none rounded px-2 py-1 w-full"
+                className="border border-black/10 bg-transparent text-black/25 rounded-lg outline-none p-3 w-full"
               />
             </div>
-            <div className="mb-4">
+            <div className="mb-4 w-full">
               <label className="block text-sm font-medium mb-2">
                 Select time
               </label>
@@ -88,10 +89,12 @@ const MakeAppointment = () => {
                 type="time"
                 value={selectedTime}
                 onChange={(e) => setSelectedTime(e.target.value)}
-                className="border border-black outline-none bg-transparent text-black rounded-md px-2 py-1 w-full"
+                className="border border-black/10 text-black/25 bg-transparent rounded-lg outline-none p-3 w-full"
               />
             </div>
-            <div className="mb-4">
+           </div>
+           <div className="flex items-center gap-3">
+             <div className="mb-4 w-full">
               <label className="block text-sm font-medium mb-2">
                 Select a department
               </label>
@@ -100,7 +103,7 @@ const MakeAppointment = () => {
                 id="opt"
                 value={selectDepartment}
                 onChange={(e) => setSelectDepartment(e.target.value)}
-                className="border border-black outline-none bg-transparent text-black rounded-md px-2 py-2 w-full"
+                className="border border-black/10 text-black/25 bg-transparent rounded-lg outline-none py-3 px-2 w-full"
               >
                 <option value="">Select department</option>
                 <option value="Vital">Vital</option>
@@ -116,7 +119,7 @@ const MakeAppointment = () => {
                 <option value="Doctor consultation">Doctor consultation</option>
               </select>
             </div>
-            <div className="mb-4">
+            <div className="mb-4 w-full">
               <label className="block text-sm font-medium mb-2">
                 Name of Patient:
               </label>
@@ -125,10 +128,10 @@ const MakeAppointment = () => {
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Enter your name"
                 type="text"
-                className="bg-transparent border border-black rounded-md outline-none w-full p-2"
+                className="border border-black/10 bg-transparent rounded-lg outline-none p-3 w-full"
               />
             </div>
-
+           </div>
             <div className="mb-4">
               <label className="block text-sm font-medium mb-2">
                 Email address:
@@ -138,7 +141,7 @@ const MakeAppointment = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
                 type="email"
-                className="bg-transparent border border-black rounded-md outline-none w-full p-2"
+                className="border border-black/10 bg-transparent shadow-md rounded-lg outline-none p-3 w-full"
               />
             </div>
 
@@ -148,7 +151,7 @@ const MakeAppointment = () => {
 
             <button
               onClick={handleSubmit}
-              className="bg-blue-600 rounded-md text-white py-2 px-4 hover:bg-blue-700 transition-colors w-full"
+              className="bg-primary/80 rounded-md text-white py-3 px-4 hover:bg-primary/70 transition-colors w-full"
             >
               Book Appointment
             </button>
