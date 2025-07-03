@@ -12,7 +12,7 @@ const RoutePage = () => {
         <Route path='/' element={<Home />}></Route>
         <Route path='/about-us' element={<About />}></Route>
         <Route path='/service' element={<Services />}></Route>
-        <Route path='/make_appointment' element={<MakeAppointment />}></Route>
+        <Route path='/make-appointment' element={<MakeAppointment />}></Route>
         <Route path='/contact' element={<Contact />}></Route>
     </Routes>
   )

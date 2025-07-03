@@ -18,7 +18,7 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 items-center gap-3">
             <div
               style={{ backgroundImage: `url(${hero_2})` }}
-              className="bg-center bg-no-repeat"
+              className="bg-center bg-no-repeat w-full"
             >
               <img
                 src={hero}

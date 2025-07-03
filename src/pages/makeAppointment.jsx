@@ -63,12 +63,12 @@ const MakeAppointment = () => {
   return (
     <div className="px-8 md:px-16 lg:px-24 py-5 md:py-20 bg-gray-100">
       {bookForm === "form" ? (
-        <div className="w-2/3 mx-auto">
+        <div className="w-full lg:w-2/3 mx-auto">
           <div className="text-2xl font-bold text-center my-4">
             Book appointment
           </div>
-          <div className="bg-slate-50 rounded-lg p-11">
-           <div className="flex items-center gap-3">
+          <div className="bg-slate-50 rounded-lg p-4 lg:p-11">
+           <div className="block lg:flex items-center gap-3">
              <div className="mb-4 w-full">
               <label className="block text-sm font-medium mb-2">
                 Select date
@@ -93,7 +93,7 @@ const MakeAppointment = () => {
               />
             </div>
            </div>
-           <div className="flex items-center gap-3">
+           <div className="block lg:flex items-center gap-3">
              <div className="mb-4 w-full">
               <label className="block text-sm font-medium mb-2">
                 Select a department

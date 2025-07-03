@@ -11,7 +11,7 @@ const navigation = [
   { name: "Home", href: "/", current: true },
   { name: "About", href: "/about-us", current: false },
   { name: "Service", href: "/service", current: false },
-  { name: "Book Appointment", href: "/make_appointment", current: false },
+  { name: "Book Appointment", href: "/make-appointment", current: false },
   { name: "Contact Us", href: "/contact", current: false },
 ];
 
